@@ -12,9 +12,10 @@
 	<style>
 		body {
 			background-color: grey;
+			overflow: hidden;
 		}
 		h2 {
-			color: rgb(46, 27, 158);
+			color: rgb(0, 0, 0);
 		}
 		#xr-button {
 			min-width: 150px;
@@ -26,14 +27,24 @@
 		#main {
 			text-align: center;
 		}
+
+		#webgl-canvas {
+			position: absolute;
+			left: 0px;
+			top: 0px;
+			z-index: -1;
+		}
 	</style>
+
+	<script type="module" src="index.js" defer></script>
 </head>
 <body>
 	<header id="main">
-		<h2>A simple WebXR App :D</h2>
-		<button id="xr-button" disabled> VR not found </button>
+		<h2>Simple WebXR App</h2>
+		<button id="xr-button" disabled> XR not found </button>
 	</header>
 
-	<script type="module" src="index.js"></script>
+	<canvas id="webgl-canvas"> HTML Canvas Element not supported! </canvas>
+
 </body>
 </html>
